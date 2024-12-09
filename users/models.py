@@ -7,8 +7,8 @@ class User(models.Model):
     email = models.EmailField(unique=True, verbose_name='Correo')
     phone = models.CharField(max_length=15, verbose_name='Teléfono')
     password = models.CharField(max_length=100, verbose_name='Contraseña')
-    image = models.ImageField(upload_to='users', verbose_name='Imagen', null=True, blank=True)  # Opcional
-    role_id = models.ForeignKey(Role, on_delete=models.CASCADE, verbose_name='Rol')  # Rol del usuario
+    image = models.ImageField(upload_to='users', verbose_name='Imagen', null=True, blank=True)  
+    role_id = models.ForeignKey(Role, on_delete=models.CASCADE, verbose_name='Rol')  
     created = models.DateField(auto_now_add=True, verbose_name="Fecha de creación")
     updated = models.DateField(auto_now=True, verbose_name="Fecha de modificación")
 
